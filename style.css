@@ -1,0 +1,248 @@
+/* style.css */
+
+/* --- Général --- */
+
+:root {
+    --couleur-primaire: #4CAF50; /* Vert science/nature */
+    --couleur-secondaire: #FFC107; /* Jaune pierre/or */
+    --couleur-texte-sombre: #333;
+    --couleur-texte-clair: #f4f4f4;
+    --couleur-fond: #fff;
+    --couleur-fond-section: #f9f9f9;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    color: var(--couleur-texte-sombre);
+    background-color: var(--couleur-fond);
+}
+
+header {
+    background-color: var(--couleur-primaire);
+    color: var(--couleur-texte-clair);
+    padding: 40px 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    margin: 0 0 10px;
+    font-size: 2.8em;
+    letter-spacing: 2px;
+}
+
+header p {
+    font-size: 1.2em;
+    font-style: italic;
+}
+
+h2 {
+    text-align: center;
+    color: var(--couleur-primaire);
+    font-size: 2em;
+    margin-bottom: 30px;
+    padding-top: 20px;
+}
+
+section {
+    padding: 40px 20px;
+    margin-bottom: 0;
+}
+
+section:nth-child(even) {
+    background-color: var(--couleur-fond-section);
+}
+
+
+/* --- Section Introduction (Synopsis) --- */
+
+.intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.intro img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.intro img:hover {
+    transform: scale(1.03);
+}
+
+.intro-text {
+    text-align: center;
+}
+
+.intro-text h2 {
+    text-align: center;
+}
+
+/* Version Desktop pour l'Intro */
+@media (min-width: 768px) {
+    .intro {
+        flex-direction: row;
+        text-align: left;
+    }
+    .intro-text {
+        text-align: left;
+        padding-left: 20px;
+    }
+    .intro-text h2 {
+        text-align: left;
+    }
+}
+
+
+/* --- Section Personnages --- */
+
+.perso-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.perso {
+    width: 150px;
+    text-align: center;
+    background-color: var(--couleur-fond);
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s;
+}
+
+.perso:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.perso img {
+    width: 100%;
+    height: 150px; /* Taille fixe pour l'uniformité */
+    object-fit: cover; /* Recadre l'image sans la déformer */
+    border-radius: 50%;
+    border: 3px solid var(--couleur-secondaire);
+}
+
+.perso p {
+    margin-top: 10px;
+    font-size: 0.9em;
+}
+
+.perso strong {
+    color: var(--couleur-primaire);
+    font-size: 1em;
+}
+
+
+/* --- Section Thèmes abordés --- */
+
+.themes ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.themes li {
+    background-color: var(--couleur-primaire);
+    color: var(--couleur-texte-clair);
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-weight: bold;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+}
+
+.themes li:hover {
+    background-color: #388E3C; /* Vert plus foncé au survol */
+}
+
+
+/* --- Section Plateformes (Où regarder) --- */
+
+.plateformes .logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    padding: 20px 0;
+}
+
+.plateformes img {
+    height: 60px;
+    width: auto;
+    transition: opacity 0.3s;
+}
+
+.plateformes img:hover {
+    opacity: 0.8;
+}
+
+
+/* --- Section Autres (Découvrez aussi) --- */
+
+.animes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.anime {
+    width: 150px;
+    text-align: center;
+}
+
+.anime img {
+    width: 100%;
+    height: 200px; /* Taille fixe pour l'uniformité des affiches */
+    object-fit: cover;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.anime img:hover {
+    transform: scale(1.05);
+}
+
+.anime p {
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 0.9em;
+}
+
+
+/* --- Footer --- */
+
+footer {
+    background-color: var(--couleur-texte-sombre);
+    color: var(--couleur-texte-clair);
+    text-align: center;
+    padding: 15px 20px;
+    font-size: 0.9em;
+    margin-top: 20px;
+}
